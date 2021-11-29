@@ -1,0 +1,26 @@
+@keyframes aparece {
+	0% { opacity: 0%; }
+	100% { opacity: 100%;}
+}
+.contenedor {
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	animation-name: aparece;
+	animation-duration: .5s;
+	animation-timing-function: ease-out;
+	border-radius: .7em;
+	backdrop-filter: blur(4px);
+}
+.contenedor p {
+	max-width: 768px;
+	padding: 16px;
+	text-align: justify;
+}
+.dark {
+	background-color: #2238;
+}
+.light {
+	background-color: #FFE8;
+}

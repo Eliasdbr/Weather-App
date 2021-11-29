@@ -1,0 +1,29 @@
+/*
+ *	Estilos generales
+ * */
+.App {
+	/*text-align: center;*/
+	width: 100%;
+}
+.dark {
+	background-color: #223;
+	min-height: 100vh;
+	background-image: url('http://www.kickvick.com/wp-content/uploads/2014/12/night-sky-photos-a-73.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.dark * {
+	color: #FFE;
+}
+.light {
+	background-color: #FFE;
+	min-height: 100vh;
+	background-image: url('https://www.daysoftheyear.com/cdn-cgi/image/fit=cover%2Cf=auto%2Conerror=redirect%2Cwidth=2560/wp-content/uploads/look-up-at-the-sky-day-1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.light * {
+	color: #223;
+}

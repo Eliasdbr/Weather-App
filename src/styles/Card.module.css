@@ -1,0 +1,120 @@
+/*
+ *	Estilos del Componente Card.
+ * */
+
+@keyframes aparece {
+	0% {
+		opacity: 0%;
+		top: 75px;
+	}
+	100% {
+		opacity: 100%;
+		top: 0;
+	}
+}
+@keyframes desaparece {
+	0% {
+		opacity: 100%;
+		transform: scale(100%); 
+	}
+	100% {
+		opacity: 0%;
+		transform: scale(50%); 
+	}
+}
+.contenedor {
+	position: relative;
+	
+	margin: 10px;
+	padding: 5px;
+	
+	width: 300px;
+	
+	border-radius: 1em;
+	box-shadow: #0003 0px 3px 8px;
+	
+	backdrop-filter: blur(4px);
+	
+	display: flex;
+	flex-direction: column;
+	align-items: space-around;
+	/*
+	animation: name duration timing-function;
+	 */
+	animation: aparece .3s cubic-bezier(.22,.61,.36,1);
+}
+.light {
+	background-color: #FFE6;
+}
+.dark {
+	background-color: #2236;
+}
+.light:hover {
+	background-color: #FFEA;
+}
+.dark:hover {
+	background-color: #223A;
+}
+.contenedor:hover {
+	box-shadow: #0001 0px 2px 6px;
+}
+.contClosing {
+	animation: desaparece .3s cubic-bezier(.22,.61,.36,1);
+}
+.title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 10px;
+}
+.title h4 {
+	/*color: #68F;*/
+	align-self: center;
+	padding: .25em 10px;
+	border-radius: 1em;
+}
+/*
+.title h4:hover {
+	background-color: #8883;
+}
+*/
+.title button {
+	text-align: center;
+	
+	width: 2em;
+	height: 2em;
+	
+	border: none;
+	border-radius: 50%;
+	
+	background-color: #0000;
+}
+.contenedor button:hover {
+	background-color: #8888;
+	cursor: pointer;
+}
+.contDatos {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 5px;
+}
+.contDatos div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	width: 80px;
+}
+.contDatos img {
+	/*position: relative;
+	top: -1em;
+	margin-right: 15px;*/
+	
+	background-color: #2225;
+	border-radius: 1em;
+	box-shadow: inset  #0002 0px 3px 8px;
+}
+.contDatos p {
+	text-align: center;
+}

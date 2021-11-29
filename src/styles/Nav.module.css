@@ -1,0 +1,76 @@
+/*
+ *	Estilos para la el componente Nav
+ * */
+.contenedor {
+	width: 100%;
+	
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between; 
+	align-items: center;
+	
+	/*padding: 10px;*/
+	box-shadow: #0002 0px 3px 8px;
+	backdrop-filter: blur(4px);
+}
+.light {
+	background-color: #FFEA;
+}
+.dark {
+	background-color: #223A;
+}
+.links{
+	display: flex;
+	flex-direction: row;
+	flex-grow: 4;
+	justify-content: flex-end;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.link {
+	margin-left: 4px;
+	padding: .7em;
+	border-radius: 1em;
+	border: 1px solid #8880;
+}
+.link:hover {
+	background-color: #8888;
+	cursor: pointer;
+}
+.link a {
+	padding: .7em;
+}
+.linkActive {
+	/*background-color: #AAA3;*/
+	border: 1px solid #8886;
+}
+.dlbutton {
+	font-size: 2em;
+	padding: 0 .25em;
+	margin: 0 10px;
+	border-radius: 1em;
+}
+.dlbutton:hover {
+	background-color: #8888;
+	cursor: pointer;
+}
+.title {
+	display: flex;
+	justify-content: center;
+	padding: 0 15px;
+}
+.title:hover {
+	background-color: #8888;
+}
+.contenedor h3 {
+	display: inline;
+	text-align: center;
+	align-self: center;
+	margin-right: 10px;
+}
+.contenedor img {
+	margin: 10px;
+	
+	/*border-radius: 50%;*/
+}
