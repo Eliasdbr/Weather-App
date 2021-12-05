@@ -8,6 +8,7 @@
 .dark {
 	background-color: #223;
 	min-height: 100vh;
+	padding-bottom: 100px;
 	background-image: url('http://www.kickvick.com/wp-content/uploads/2014/12/night-sky-photos-a-73.jpg');
 	background-size: cover;
 	background-position: center;
@@ -19,6 +20,7 @@
 .light {
 	background-color: #FFE;
 	min-height: 100vh;
+	padding-bottom: 100px;
 	background-image: url('https://www.daysoftheyear.com/cdn-cgi/image/fit=cover%2Cf=auto%2Conerror=redirect%2Cwidth=2560/wp-content/uploads/look-up-at-the-sky-day-1.jpg');
 	background-size: cover;
 	background-position: center;

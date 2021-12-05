@@ -25,19 +25,17 @@
 .contenedor {
 	position: relative;
 	
-	margin: 10px;
+	margin: 10px 1px;
 	padding: 5px;
 	
-	width: 300px;
-	
-	border-radius: 1em;
 	box-shadow: #0003 0px 3px 8px;
 	
 	backdrop-filter: blur(4px);
 	
 	display: flex;
 	flex-direction: column;
-	align-items: space-around;
+	justify-content: center;
+	align-items: center;
 	/*
 	animation: name duration timing-function;
 	 */
@@ -66,20 +64,20 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px 10px;
+	width: 100%;
 }
 .title h4 {
-	/*color: #68F;*/
-	align-self: center;
+
+	text-align: left;
 	padding: .25em 10px;
 	border-radius: 1em;
 }
-/*
-.title h4:hover {
-	background-color: #8883;
-}
-*/
 .title button {
 	text-align: center;
+	/*
+	position: absolute;
+	right: .7em;
+	*/
 	
 	width: 2em;
 	height: 2em;
@@ -94,8 +92,16 @@
 	cursor: pointer;
 }
 .contDatos {
+	width: 300px;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
+	padding: 5px;
+}
+.contDatosPron {
+	width: 140px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding: 5px;
 }
 .contDatos div {
@@ -106,15 +112,32 @@
 	
 	width: 80px;
 }
-.contDatos img {
-	/*position: relative;
-	top: -1em;
-	margin-right: 15px;*/
-	
+.contenedor img {
 	background-color: #2225;
 	border-radius: 1em;
 	box-shadow: inset  #0002 0px 3px 8px;
 }
 .contDatos p {
 	text-align: center;
+}
+.contDatosPron div {
+	display: flex;
+	align-items: center ;
+	justify-content: space-between;
+	
+	width: 100px;
+}
+.left {
+	border-radius: 1em 0 0 1em;
+	margin-left: 10px;
+	margin-right: 1px;
+}
+.right {
+	border-radius: 0 1em 1em 0;
+	margin-left: 1px;
+	margin-right: 10px;
+}
+.only {
+	border-radius: 1em;
+	margin: 10px 10px;
 }

@@ -11,6 +11,7 @@ export default function Cards({cities, onClose, darkMode}) {
 					id={c.id}
 					max={c.max}
 					min={c.min}
+					hum={c.hum}
 					name={c.name}
 					img={c.img}
 					onClose={() => onClose(c.id)}
@@ -20,7 +21,13 @@ export default function Cards({cities, onClose, darkMode}) {
 	);
 	else return (
 		<div className={s.contenedor}>
-			<span className={darkMode ? s.dark : s.light}>(Aún no hay ciudades)</span>
+			<div className={`${darkMode ? s.dark : s.light} ${s.welcome}`}>
+				<h1>¡Bienvenid@ a Weather App!</h1>
+				<h3>
+					Para agregar una ciudad, escribe su nombre en la caja de búsqueda 
+					y luego presiona el botón de 'Agregar'.
+				</h3>
+			</div>
 		</div>
 	);
 }

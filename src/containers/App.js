@@ -8,7 +8,7 @@ import About from '../components/About.jsx';
 import Ciudad from '../components/Ciudad.jsx';
 // import Error from '../components/Error.jsx';
 
-const apiKey = '1813c8855d7d0b4dcd9d8da148144eb6';
+const API_KEY = '1813c8855d7d0b4dcd9d8da148144eb6';
 
 function App() {
 	const [cities, setCities] = useState([]);
@@ -19,13 +19,16 @@ function App() {
 	}
 	function onSearch(ciudad) {
 		//Llamado a la API del clima
-		fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric&lang=es`)
-			.then(r => r.json())
+		fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API_KEY}&units=metric&lang=es`)
+			.then(r => {
+				return r.json()
+			})
 			.then((recurso) => {
 				if(recurso.main !== undefined){
 					const ciudad = {
 						min: Math.round(recurso.main.temp_min),
 						max: Math.round(recurso.main.temp_max),
+						hum: recurso.main.humidity,
 						img: recurso.weather[0].icon,
 						id: recurso.id,
 						wind: recurso.wind.speed,
@@ -36,6 +39,7 @@ function App() {
 						latitud: recurso.coord.lat,
 						longitud: recurso.coord.lon,
 						time: new Date((recurso.dt + recurso.timezone) * 1000),
+						timezone: recurso.timezone * 1000,
 					};
 					setCities(oldCities => [...oldCities, ciudad]);
 				} else {

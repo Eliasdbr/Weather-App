@@ -9,7 +9,7 @@
 	flex-wrap: wrap;
 	transition: display ease-out .25s;
 }
-.contenedor span {
+.welcome {
 	text-align: center;
 	padding: 8px;
 	border-radius: .7em;

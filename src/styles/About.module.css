@@ -3,7 +3,7 @@
 	100% { opacity: 100%;}
 }
 .contenedor {
-	margin: 10px;
+	margin: 10px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -14,9 +14,18 @@
 	backdrop-filter: blur(4px);
 }
 .contenedor p {
-	max-width: 768px;
+	min-width: 300px;
 	padding: 16px;
 	text-align: justify;
+}
+.foto {
+	height: 150px;
+}
+.info {
+	max-width: 768px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .dark {
 	background-color: #2238;
