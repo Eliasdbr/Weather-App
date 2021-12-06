@@ -6,6 +6,7 @@ import Nav from '../components/Nav.jsx';
 import Cards from '../components/Cards.jsx';
 import About from '../components/About.jsx';
 import Ciudad from '../components/Ciudad.jsx';
+import PopUp from '../components/PopUp.jsx';
 // import Error from '../components/Error.jsx';
 
 const API_KEY = '1813c8855d7d0b4dcd9d8da148144eb6';
@@ -13,6 +14,8 @@ const API_KEY = '1813c8855d7d0b4dcd9d8da148144eb6';
 function App() {
 	const [cities, setCities] = useState([]);
 	const [darkMode, setDarkMode] = useState(true);
+	const [popUp, setPopUp] = useState(false);
+	const [noCity, setNoCity] = useState(false);
 	
 	function onClose(id) {
 		setCities(oldCities => oldCities.filter(c => c.id !== id));
@@ -43,7 +46,8 @@ function App() {
 					};
 					setCities(oldCities => [...oldCities, ciudad]);
 				} else {
-					alert("Ciudad no encontrada");
+					setNoCity(true);
+					setPopUp(true);
 				}
 			});
 	}
@@ -72,11 +76,20 @@ function App() {
 				<About darkMode={darkMode}/>
 			</Route>
 			<Route exact path="/">
+				<>
 				<Cards
 					cities={cities}
 					onClose={onClose}
 					darkMode={darkMode}
 				/>
+				{(noCity && popUp) &&
+					<PopUp title='Hmmm...' 
+						description={`La ciudad no ha sido encontrada.`}
+						cancelName='Cerrar' cancelAction={() => setPopUp(false)}
+						darkMode={darkMode}
+					/>
+				}
+				</>
 			</Route>
 			<Route exact path="/ciudad/:ciudadId">
 				<Ciudad onFilter={onFilter} darkMode={darkMode}/>
